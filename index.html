@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AI Import Export Logistics Estimator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- WORLD MAP BACKGROUND -->
+<div class="world-bg">
+  <div class="map-overlay"></div>
+
+  <!-- ANIMATED ROUTES -->
+  <div class="route route1"></div>
+  <div class="route route2"></div>
+  <div class="route route3"></div>
+
+  <div class="content">
+
+    <h1>🌍 AI Import–Export Logistics Estimator</h1>
+    <p class="subtitle">Smart Cost & Delivery Prediction for Global Trade</p>
+
+    <!-- INPUT CARD -->
+    <div class="card">
+      <input type="text" placeholder="Origin Country / City">
+      <input type="text" placeholder="Destination Country / City">
+      <input type="number" id="distance" placeholder="Distance (km)">
+      <input type="number" id="weight" placeholder="Cargo Weight (kg)">
+
+      <select id="vehicle">
+        <option value="">Select Transport Mode</option>
+        <option value="mini">Mini Truck (Domestic)</option>
+        <option value="truck">Truck</option>
+        <option value="container">Container Truck</option>
+        <option value="rail">Rail Freight</option>
+        <option value="sea">Sea Freight</option>
+        <option value="air">Air Freight</option>
+      </select>
+
+      <button onclick="estimateCost()">Estimate Logistics Cost</button>
+    </div>
+
+    <!-- LOADING -->
+    <div id="loading" class="loading hidden">
+      <div class="spinner"></div>
+      <p>AI optimizing global trade route...</p>
+    </div>
+
+    <!-- RESULT -->
+    <div id="result" class="card hidden"></div>
+
+    <!-- FOUNDER -->
+    <div class="card founder">
+      <h3>👤 Founder</h3>
+      <p><b>Suyash Patil</b></p>
+      <p>Founder & Developer</p>
+      <p class="founder-desc">
+        Operations & Supply Chain Management enthusiast focused on
+        AI-powered import–export logistics optimization.
+      </p>
+      <a href="https://www.linkedin.com/in/suyash-patil-883667361"
+         target="_blank" class="linkedin">
+        🔗 LinkedIn Profile
+      </a>
+    </div>
+
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

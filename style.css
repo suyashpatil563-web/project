@@ -1,0 +1,147 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
+
+/* WORLD MAP BACKGROUND */
+.world-bg {
+  min-height: 100vh;
+  background: url("https://upload.wikimedia.org/wikipedia/commons/8/80/World_map_-_low_resolution.svg")
+    center / cover no-repeat;
+  position: relative;
+}
+
+/* DARK OVERLAY */
+.map-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(5, 10, 25, 0.82);
+}
+
+/* MOVING ROUTES */
+.route {
+  position: absolute;
+  width: 140%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #00ffea, transparent);
+  opacity: 0.6;
+  animation: moveRoute 6s linear infinite;
+}
+
+.route1 { top: 30%; animation-duration: 6s; }
+.route2 { top: 50%; animation-duration: 8s; }
+.route3 { top: 70%; animation-duration: 10s; }
+
+@keyframes moveRoute {
+  from { left: -140%; }
+  to { left: 140%; }
+}
+
+/* CONTENT LAYER */
+.content {
+  position: relative;
+  z-index: 2;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  text-align: center;
+  padding: 20px;
+}
+
+/* TITLES */
+h1 {
+  text-shadow: 0 0 16px #00e6ff;
+}
+
+.subtitle {
+  color: #9befff;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+/* GLASS CARD */
+.card {
+  background: rgba(255, 255, 255, 0.10);
+  backdrop-filter: blur(16px);
+  border-radius: 18px;
+  padding: 20px;
+  margin-bottom: 18px;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.2);
+}
+
+/* INPUTS */
+input, select {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+}
+
+/* BUTTON */
+button {
+  width: 100%;
+  padding: 13px;
+  margin-top: 10px;
+  background: linear-gradient(90deg, #00e6ff, #00ff9d);
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  box-shadow: 0 0 18px #00ffea;
+  transform: translateY(-2px);
+}
+
+/* LOADING */
+.loading {
+  text-align: center;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid rgba(255,255,255,0.3);
+  border-top: 4px solid #00ffea;
+  border-radius: 50%;
+  margin: auto;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  100% { transform: rotate(360deg); }
+}
+
+.hidden { display: none; }
+
+/* FOUNDER */
+.founder h3 { color: #00ffea; }
+
+.founder-desc {
+  font-size: 13px;
+  opacity: 0.9;
+}
+
+.linkedin {
+  color: #00e6ff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.linkedin:hover {
+  text-shadow: 0 0 10px #00e6ff;
+}
